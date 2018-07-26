@@ -1,7 +1,5 @@
 @echo off
 
-::This script is used for manual agent installation and upgrade of the AppDynamics .Net Agent 
-
 ::Please change these variables. 
 ::Note that the agent_installation_dir agent_conf_dir MUST be a full path. 
 SET msi_file_path=dotNetAgentSetup64-4.4.3.2209.msi
