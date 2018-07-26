@@ -24,9 +24,13 @@ IF errorlevel 0 (
 
 )else ( echo agent is not install )
 
-echo installing  the new agent
+echo installing  the new agent...
 
 msiexec /i %msi_file_path% /q /norestart /lv log_path AD_SetupFile=%config_file_path% INSTALLDIR=%agent_installation_dir% DOTNETAGENTFOLDER=%agent_conf_dir%
+
+echo starting the Agent Service...
+
+net start AppDynamics.Agent.Coordinator
 
 echo Completed!
 
