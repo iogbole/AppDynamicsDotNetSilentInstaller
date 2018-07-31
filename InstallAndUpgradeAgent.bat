@@ -26,7 +26,7 @@ IF errorlevel 0 (
 
 echo installing  the new agent...
 
-msiexec /i %msi_file_path% /q /norestart /lv log_path AD_SetupFile=%config_file_path% INSTALLDIR=%agent_installation_dir% DOTNETAGENTFOLDER=%agent_conf_dir%
+msiexec /i %msi_file_path% /q /norestart /lv %log_path% AD_SetupFile=%config_file_path% INSTALLDIR=%agent_installation_dir% DOTNETAGENTFOLDER=%agent_conf_dir%
 
 echo starting the Agent Service...
 
